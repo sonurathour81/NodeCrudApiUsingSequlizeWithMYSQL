@@ -1,3 +1,28 @@
+const Web3 = require("web3");
+const rpcURL = "https://mainnet.infura.io/v3/608efb926eee4ffe92cde4bff9cab15f"; // Your RPC URL goes here
+const web3 = new Web3(new Web3.providers.HttpProvider(rpcURL));
+
+const createWallet = async (req, res) => {
+
+  console.log("testtttt====", web3);
+  // const address = '0x000095E79eAC4d76aab57cB2c1f091d553b36ca0' // Your account address goes here
+  // web3.eth.getBalance(address, (err, wei) => {
+  //   if (err) {
+  //     console.log("error=", err)
+  //   } else {
+  //     console.log("balance=", wei)
+  //     walletDetails.Balance = wei;
+  //     walletDetails.Address = address;
+  //     // insert user data into coins table
+  //     var sql = 'INSERT INTO wallets SET ?';
+  //     db.query(sql, walletDetails, function (err, data) {
+  //       if (err) throw err;
+  //       res.send({ status: 200, message: "Wallet data is inserted successfully" });
+  //     });
+  //   }
+  // })
+};
+
 const db = require("../models");
 const Product = db.products;
 const Review = db.reviews;
@@ -80,4 +105,5 @@ module.exports = {
   deleteProduct,
   getPublishedProduct,
   getProductReviews,
+  createWallet,
 };
