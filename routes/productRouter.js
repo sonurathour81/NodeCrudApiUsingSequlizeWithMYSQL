@@ -1,7 +1,6 @@
 const productController = require("../controllers/productController.js");
 const router = require("express").Router();
 
-router.get("/wallet", productController.createWallet);
 router.post("/addProduct", productController.addProduct);
 router.get("/allProducts", productController.getAllProducts);
 router.get("/published", productController.getPublishedProduct);
