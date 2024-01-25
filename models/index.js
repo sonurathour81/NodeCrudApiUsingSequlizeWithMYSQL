@@ -2,6 +2,7 @@ const { Sequelize } = require("sequelize");
 const sequelize = require("./connection");
 const productModal = require("./productModel.js");
 const reviewModal = require("./reviewModel.js");
+const weatherModal = require("./weatherApis.js");
 
 const db = {};
 
@@ -12,6 +13,7 @@ db.sequelize = sequelize;
 
 db.products = productModal();
 db.reviews = reviewModal();
+db.weather = weatherModal();
 
 // sync db
 
